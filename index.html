@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de cartas</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+            
+        body{
+            
+        }
+        #container{
+            margin: 0 auto;
+            
+            width: 90%;
+        }
+        h1{
+            color: honeydew;
+            margin-top: .5em;
+            text-align: center;
+            font-size: 50px;
+            font-family: sans-serif;
+            background-color: blue;
+            border: 5px dashed red;
+            border-radius: 50px;
+        }
+        
+        #tapete{
+            background-color: darkgreen;
+            color: black;
+            text-align: center;
+            min-height: 600px;
+            border: 10px solid black;
+            border-radius: 25px;
+            align-items: center;
+      
+        }
+        
+        
+        #croupier, #jugador{
+            display: inline-block;
+            width: 38%;
+            margin: 50px;
+            text-align: center;
+            position: relative;
+            
+            
+        }
+         
+        
+        
+         @keyframes cartasAparecen{
+                  from {
+                    left: -1000px;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 0;
+                    opacity: 1;
+                  }
+                } 
+        #tapete div{
+            animation: cartasAparecen;
+            animation-duration: 6s;
+        }
+        
+       
+        #tapete img{
+            display:inline-block;
+            background-color: white;
+            margin: 2em;
+            padding: 1em;
+            box-shadow: 10px 10px 12px;
+            border: 3px solid red;
+            border-radius: 30px;        
+        }
+
+        #botones{
+            text-align: center;
+        }
+        #botones button{
+            text-align: center;
+            margin: 20px;
+            width: 200px;
+            height: 50px;
+            background-color: deepskyblue;
+            color: black;
+            font-size: 2em;
+            font-family: monospace;
+            border-radius: 20px;
+            
+        }
+        #display{
+            text-align: center;
+            min-height: 70px;
+            font-size: 50px;
+            margin-bottom: 20px;
+            font-family:monospace;
+            position: relative;
+        }
+        
+        
+        div#display{
+            position: relative;
+            animation-duration: 3s;
+            animation-name: display;
+            animation-delay: 3s;
+            
+        }
+        @keyframes display{
+          from {
+            margin-left: -1000px;
+            
+          }
+
+          to {
+            margin-left: 0;
+            
+          }
+        }
+        
+        
+        .cartalista{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+      <h1>Carta mas alta</h1>
+       <div id="botones">
+           <button id="cartaA" type="button">start</button>
+           <button id ="mostrarB" type="button">MostrarBaraja </button>
+              
+       </div>
+       <div id="display">
+<!--            <p>Gana jugador</p>-->
+             
+       </div>
+       <div id="tapete">
+           <div id="croupier">
+<!--               <img src="baraja-svg/10_of_clubs.svg" alt="">-->
+           </div>
+           
+           <div id="jugador">
+<!--               <img src="baraja-svg/10_of_clubs.svg" alt="">-->
+           </div>
+          
+       </div>
+       <div id="mostrarBaraja">
+           
+       </div>
+       
+   </div>
+   
+   
+   
+    <script src="biblioteca.js"></script>
+    <script src="baraja.js"></script>
+    <script src="croupier.js"></script>
+    <script src="jugador.js"></script>
+    <script src="carta-mas-alta.js"></script>
+    <script src="mostrar-baraja.js"></script>
+    
+    
+</body>
+</html>
